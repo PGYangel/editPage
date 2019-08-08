@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>可视化手机落地页编辑后台</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <script src="js/jquery-1.11.1.min.js?v=1" type="text/javascript"></script>
+    <link href="css/index.css?v=1" rel="stylesheet" type="text/css">
+    <link href="css/colpick.css?v=1" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="leftNav">
+    <h1>模块组件</h1>
+    <div class="unit">
+
+    </div>
+</div>
+<div class="rightMain">
+    <div class="topNav">
+        <div class="layout">
+            <a href="javascript:resetEditFn();">重置</a>
+            <a href="javascript:downEditFn();">下载</a>
+            <a href="javascript:;" onclick="saveObjFn();">保存</a>
+        </div>
+    </div>
+    <div class="leftBox">
+        <div class="layout editArea">
+            <h6 class="viewTitle">编辑视图</h6>
+            <div class="topBox" id="topBox">
+
+            </div>
+            <div class="bottomBox" id="bottomBox">
+
+            </div>
+            <div class="editBox" id="editBox">
+
+            </div>
+        </div>
+    </div>
+    <div class="rightBox">
+        <div class="layout viewArea">
+            <h6 class="viewTitle">预览视图</h6>
+            <div class="viewBox">
+                <iframe id="view" name="view" src="view.html" width="390" height="667"></iframe>
+            </div>
+            <p>预览视图仅供参考，最终效果以手机访问效果为准！</p>
+        </div>
+    </div>
+    <div class="rightBox2">
+        <div class="layout">
+            <h6 class="Title">页面设置</h6>
+            <div class="row">
+                <span class="txt">页面标题：</span>
+                <input type="text" id="pageTitle" class="valChange" data-type="commModel.pageTitle"/>
+            </div>
+            <div class="row">
+                <span class="txt">预设配置：</span>
+                <select>
+                    <option value="远征手游">远征手游</option>
+                    <option value="远征手游马甲1">远征手游马甲1</option>
+                    <option value="远征手游马甲2">远征手游马甲2</option>
+                    <option value="龙武手游">龙武手游</option>
+                </select>
+            </div>
+            <div class="row">
+                <span class="txt">所属游戏：</span>
+                <select>
+                    <option value="远征手游">远征手游</option>
+                    <option value="远征手游马甲1">远征手游马甲1</option>
+                    <option value="远征手游马甲2">远征手游马甲2</option>
+                    <option value="龙武手游">龙武手游</option>
+                </select>
+            </div>
+            <div class="row">
+                <span class="txt">部署域名：</span>
+                <select>
+                    <option value="远征手游">yzsy.q1.com</option>
+                    <option value="远征手游马甲1">yzsy1.q1.com</option>
+                    <option value="远征手游马甲2">yzsy2.q1.com</option>
+                    <option value="龙武手游">lwsy.q1.com</option>
+                </select>
+            </div>
+            <div class="row">
+                <span class="txt">生成文件名：</span>
+                <select>
+                    <option value="随机">随机</option>
+                    <option value="自定义">自定义</option>
+                </select>
+                <div class="nameBox">
+                    <input type="text" class="pageName" id="fileName"/>
+                </div>
+            </div>
+            <div class="row">
+                <p class="urlTxt">最终生成URL地址：</p>
+                <textarea disabled="disabled" id="pageUrl" id="resultUrlTxt"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/colpick.js?v=1" type="text/javascript"></script>
+<script src="js/save.js?v=1" type="text/javascript"></script>
+<script src="js/edit.Upload.js?v=1" type="text/javascript"></script>
+<script src="js/qrjs2.min.js?v=1" type="text/javascript"></script>
+<script src="js/comm.model.js?v=1" type="text/javascript"></script>
+<script src="js/edit.model.js?v=1" type="text/javascript"></script>
+<script src="js/edit.controller.js?v=1" type="text/javascript"></script>
+<script src="js/comm.controller.js?v=1" type="text/javascript"></script>
+
+</body>
+</html>

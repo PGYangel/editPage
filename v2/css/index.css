@@ -1,0 +1,116 @@
+@charset "UTF-8";
+*{padding:0;margin:0;list-style: none;text-decoration:none;border:none;}
+body{font-family:"微软雅黑","Microsoft YaHei";}
+.leftNav{color:#fff;z-index:10;position:absolute;left:0;top:0;width:200px;height:100%;background:#272C33;min-height: 600px;overflow:auto;border-right:1px solid #3F4652;}
+.leftNav h1{height:29px;line-height:29px;font-size: 16px;text-align: center;border-bottom:1px solid #3F4652;padding-bottom:5px;padding-top:5px;}
+.leftNav .unit{font-size:14px;}
+.leftNav .unit li{overflow:hidden;transition: all 0.5s;-moz-transition: all 0.5s;-webkit-transition: all 0.5s;-o-transition: all 0.5s;}
+.leftNav .unit li.hiddenNav{height:35px;}
+.leftNav .unit h6{font-size:14px;height:34px;line-height:34px;text-indent: 35px;border-bottom:1px solid #3F4652;font-weight:normal;cursor:pointer;}
+.leftNav .unit .navIcon{background-size:15px;background-repeat: no-repeat;background-position:9px 9px;}
+.leftNav .unit .navIcon1{background-image:url(https://img.ssl.q1.com/editPage/img/suspension.png?v=1)}
+.leftNav .unit .navIcon2{background-image:url(https://img.ssl.q1.com/editPage/img/images.png?v=1)}
+.leftNav .unit .navIcon3{background-image:url(https://img.ssl.q1.com/editPage/img/text.png?v=1)}
+.leftNav .unit .navIcon4{background-image:url(https://img.ssl.q1.com/editPage/img/planting.png?v=1)}
+.leftNav .unit .subNav{background:#3F4652;}
+.leftNav .unit .subNav li{text-align: center;padding-top:10px;padding-bottom:10px;}
+.leftNav .unit .subNav li a{display: block;color:#fff;}
+/*滚动条样式*/
+.leftNav::-webkit-scrollbar{width:4px;}
+.leftNav::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);background: rgba(255,255,255,0.8);}
+.leftNav::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);border-radius: 0;background: rgba(0,0,0,0.1);}
+
+.topNav{z-index:5;width:100%;min-width:1220px;height:30px;padding-top:5px;padding-bottom:5px;background:#272C33;position:absolute;top:0;}
+.topNav .layout{height:30px;padding-left:220px;}
+.topNav .layout a{border-radius:5px;margin-right:8px;float: left;padding-left:15px;padding-right:15px;display: block;height: 30px;line-height:30px;font-size: 14px;color:#fff;background:#006dcc;}
+.topNav .layout a:hover{background:#0044cc;}
+.topNav .layout a.focus{background:#0044cc;}
+.rightMain{width:100%;z-index:1;position:absolute;left:0;top:0;height:100%;min-height: 600px;}
+
+.rightMain .leftBox{color:#464646;z-index:1;left:0;top:0;padding-left:200px;width: 515px;height:100%;min-height: 600px;position:absolute;overflow:auto;}
+.rightMain .leftBox .layout{width: 100%;padding-top:40px;}
+.rightMain .leftBox .layout .viewTitle{color:#464646;text-indent:10px;font-size: 14px;font-weight:normal;height: 25px;line-height: 25px;border-bottom:1px solid #CCD5DB;}
+.rightMain .leftBox .topBox{display: none;}
+.rightMain .leftBox .bottomBox{display: none;}
+.rightMain .leftBox .editBox{width: 100%;position:relative;margin-top:10px;}
+.rightMain .leftBox .editArea{display: block;}
+.rightMain .leftBox::-webkit-scrollbar{width:4px;}
+.rightMain .leftBox::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);background: rgba(0,0,0,0.5);}
+.rightMain .leftBox::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);border-radius: 0;background: rgba(0,0,0,0.1);}
+.txtColor{display: none}
+
+.rightMain .rightBox{z-index:1;left:716px;top:0;width: 450px;height:100%;min-height: 600px;border-left:1px solid #CCD5DB;position:absolute;overflow:auto;border-right:1px solid #CCD5DB;}
+.rightMain .rightBox .layout{padding-top:40px;font-size: 14px;}
+.rightMain .rightBox .layout .viewTitle{color:#464646;text-indent:10px;font-size: 14px;font-weight:normal;height: 25px;line-height: 25px;border-bottom:1px solid #CCD5DB;}
+.rightMain .rightBox .layout .viewBox{width:390px;height:667px;border:1px solid #CCD5DB;margin:15px auto;}
+.rightMain .rightBox .layout p{text-align: center; color:#464646}
+
+.rightMain .rightBox2{z-index:1;left:1166px;top:0;width: 400px;height:100%;min-height: 600px;position:absolute;overflow:auto;border-right:1px solid #CCD5DB;}
+.rightMain .rightBox2 .layout{padding-top:40px;font-size: 14px;}
+.rightMain .rightBox2 .layout .Title{color:#464646;text-indent:10px;font-size: 14px;font-weight:normal;height: 25px;line-height: 25px;border-bottom:1px solid #CCD5DB;float: left;width: 100%}
+.rightMain .rightBox2 .layout .row{float: left;width: 100%;padding-top:8px;padding-bottom:5px;}
+.rightMain .rightBox2 .layout .row .txt{height:25px;float: left;width: 135px;text-align: right;line-height:25px;}
+.rightMain .rightBox2 .layout .row input{border:1px solid #000;height:23px;float: left;}
+.rightMain .rightBox2 .layout .row select{border:1px solid #000;height:23px;float: left;}
+.rightMain .rightBox2 .layout .row .nameBox{float: left;clear:both;padding-top:8px;padding-left:135px;}
+.rightMain .rightBox2 .layout .row .urlTxt{float: left;width: 100%;text-align: center;clear:both;}
+.rightMain .rightBox2 .layout .row textarea{border:1px solid #000;width: 370px;height:80px;resize: none;float: left;margin-left:15px;}
+#rwCode img{width: 232px;height:232px;}
+
+.baseCT{transition:top .5s;-moz-transition:top .5s;-o-transition:top .5s;-webkit-transition:top .5s;left:10px;width:480px;position:absolute;border:1px solid #000;font-size: 12px;padding-bottom:10px;background:#fff;}
+.CTnav{height:25px;line-height:25px;border-bottom:1px solid #000;padding:5px;}
+.CTnav a.btn{background:#006dcc;color:#fff;float: right;margin-right:5px;display: block;height:25px;line-height: 25px;padding-left:8px;padding-right:8px;}
+.CTnav a.btn:hover{background:#0044cc;}
+.CTnav a.delBtn{background:#953b39;color:#fff;float: right;margin-right:5px;display: block;height:25px;line-height: 25px;padding-left:8px;padding-right:8px;}
+.CTnav a.delBtn:hover{background:#b94a48;}
+.CTrow{float: left;width: 100%;padding-top:8px;padding-bottom:8px;}
+.CTrow span{float: left;width: 135px;text-align:right;height:25px;line-height:25px;}
+.CTrow em{float: left;height:25px;line-height:25px;font-style:normal;margin-left:5px;}
+.CTrow input.textInput{border:1px solid #000;padding-left:5px;height:23px;float: left;width: 180px;}
+.CTrow select{border:1px solid #000;}
+.CTrow .textArea{border:1px solid #000;width: 300px;height:50px;resize: none;float: left;padding:5px;}
+.CTrow .addBNBtn{height:25px;line-height: 25px;padding-left:8px;padding-right:8px;background:#006dcc;color:#fff;cursor:pointer;}
+.CTrow .delBNBtn{height:25px;line-height: 25px;padding-left:8px;padding-right:8px;background:#953b39;color:#fff;cursor:pointer;}
+
+.topBox{padding-top:10px;padding-left:10px;padding-bottom:10px;border-bottom:1px solid #CCD5DB;}
+.topCT{border:1px solid #000;font-size: 12px;padding-bottom:10px;background:#fff;width:480px;}
+.topCTnav{height:25px;line-height:25px;border-bottom:1px solid #000;padding:5px;}
+.topCTnav a.btn{background:#006dcc;color:#fff;float: right;margin-right:5px;display: block;height:25px;line-height: 25px;padding-left:8px;padding-right:8px;}
+.topCTnav a.btn:hover{background:#0044cc;}
+.topCTnav a.delBtn{background:#953b39;color:#fff;float: right;margin-right:5px;display: block;height:25px;line-height: 25px;padding-left:8px;padding-right:8px;}
+.topCTnav a.delBtn:hover{background:#b94a48;}
+.topCTrow{float: left;width: 100%;padding-top:8px;padding-bottom:8px;}
+.topCTrow span{float: left;width: 135px;text-align:right;height:25px;line-height:25px;}
+.topCTrow input.textInput{border:1px solid #000;padding-left:5px;float: left;}
+.topCTrow select{border:1px solid #000;}
+.topCTrow .textArea{border:1px solid #000;width: 100%;height:50px;resize: none;}
+
+.bottomBox{padding-top:10px;padding-left:10px;padding-bottom:10px;border-bottom:1px solid #CCD5DB;}
+.bottomCT{border:1px solid #000;font-size: 12px;padding-bottom:10px;background:#fff;width:480px;}
+.bottomCTnav{height:25px;line-height:25px;border-bottom:1px solid #000;padding:5px;}
+.bottomCTnav a.btn{background:#006dcc;color:#fff;float: right;margin-right:5px;display: block;height:25px;line-height: 25px;padding-left:8px;padding-right:8px;}
+.bottomCTnav a.btn:hover{background:#0044cc;}
+.bottomCTnav a.delBtn{background:#953b39;color:#fff;float: right;margin-right:5px;display: block;height:25px;line-height: 25px;padding-left:8px;padding-right:8px;}
+.bottomCTnav a.delBtn:hover{background:#b94a48;}
+.bottomCTrow{float: left;width: 100%;padding-top:8px;padding-bottom:8px;}
+.bottomCTrow span{float: left;width: 135px;text-align:right;height:25px;line-height:25px;}
+.bottomCTrow input.textInput{border:1px solid #000;padding-left:5px;float: left;}
+.bottomCTrow select{border:1px solid #000;}
+.bottomCTrow .textArea{border:1px solid #000;width: 100%;height:50px;resize: none;}
+
+.red{color:red;}
+
+.color-box,.color-box-top{
+    width:15px;
+    height:15px;
+    border: 1px solid #000;
+    display: inline-block;
+}
+.colpick{
+    z-index: 50;
+    padding-bottom:15px;
+}
+.hiddenUnit{
+    display: none;
+}
+.tipsTxt{color:red;padding:5px;text-align: center;}
