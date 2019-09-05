@@ -32,6 +32,12 @@ var viewCT=[
             rhtml+='<img src="'+obj.bgImg+'" alt=""/>';
             rhtml+='</div>';
             $(".wrap").before(rhtml);
+            if(parseInt(obj.isMove)){
+                var rhtml2='<div class="basis1">';
+                rhtml2+='<img src="'+obj.bgImg+'" alt=""/>';
+                rhtml2+='<br style="clear:both;"></div>';
+                $(".wrap").prepend(rhtml2);
+            }
         }
     },
     {
@@ -59,6 +65,7 @@ var viewCT=[
         "ctName": "textBasis",
         "cnName": "普通文本",
         "creatHtml":function(obj){
+            obj.txt = obj.txt.replace(/\n/g,"<br/>");
             var rhtml='<div class="textBasis" style="background:'+obj.bgColor+';color:'+obj.txtColor+';">';
             rhtml+='<p>'+obj.txt+'</p>';
             rhtml+='</div>';
@@ -69,6 +76,7 @@ var viewCT=[
         "ctName": "textBasis2",
         "cnName": "版权文本",
         "creatHtml":function(obj){
+            obj.txt = obj.txt.replace(/\n/g,"<br/>");
             var rhtml='<div class="textBasis" style="background:'+obj.bgColor+';color:'+obj.txtColor+';">';
             rhtml+='<p>'+obj.txt+'</p>';
             rhtml+='</div>';

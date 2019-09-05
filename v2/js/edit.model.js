@@ -1,153 +1,155 @@
 ﻿/**
  * Created by Administrator on 2018/4/19.
  */
+
+
 //左侧导航
 (function(){
     var rhtml='<ul>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon1">悬浮框</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addTopCTFn(\'topBasis2\')">\
-                                    <img src="images/suspension-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/suspension-case1.png" alt="">\
                                     <p>顶部悬浮框</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addBottomCTFn(\'bottomBasis1\')">\
-                                    <img src="images/suspension-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/suspension-case1.png" alt="">\
                                     <p>底部悬浮框</p>\
                                 </a>\
                             </li>\
                         </ul>\
                     </li>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon2">图片</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'basis1\')">\
-                                    <img src="images/suspension-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/suspension-case1.png" alt="">\
                                     <p>图片组件</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'downBasis\')">\
-                                    <img src="images/suspension-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/suspension-case1.png" alt="">\
                                     <p>有下载功能图片组件</p>\
                                 </a>\
                             </li>\
                         </ul>\
                     </li>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon3">文本</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'textBasis\')">\
-                                    <img src="images/text-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/text-case1.png" alt="">\
                                     <p>普通文本</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'textBasis2\')">\
-                                    <img src="images/text-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/text-case1.png" alt="">\
                                     <p>版权文本</p>\
                                 </a>\
                             </li>\
                         </ul>\
                     </li>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon4">自定义轮播</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis1\')">\
-                                    <img src="images/planting-case0.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case0.png" alt="">\
                                     <p>自定义轮播组件</p>\
                                 </a>\
                             </li>\
                         </ul>\
                     </li>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon4">平铺左右轮播</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis2\')">\
-                                    <img src="images/planting-case1.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case1.png" alt="">\
                                     <p>平铺左右轮播</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis3\')">\
-                                    <img src="images/planting-case2.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case2.png" alt="">\
                                     <p>带左右按钮</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis4\')">\
-                                    <img src="images/planting-case3.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case3.png" alt="">\
                                     <p>带分页按钮</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis5\')">\
-                                    <img src="images/planting-case4.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case4.png" alt="">\
                                     <p>带左右和分页按钮</p>\
                                 </a>\
                             </li>\
                         </ul>\
                     </li>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon4">居中左右轮播</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis6\')">\
-                                    <img src="images/planting-case5.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case5.png" alt="">\
                                     <p>居中左右轮播</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis7\')">\
-                                    <img src="images/planting-case6.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case6.png" alt="">\
                                     <p>带左右按钮</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis8\')">\
-                                    <img src="images/planting-case7.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case7.png" alt="">\
                                     <p>带分页按钮</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis9\')">\
-                                    <img src="images/planting-case8.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case8.png" alt="">\
                                     <p>带左右和分页按钮</p>\
                                 </a>\
                             </li>\
                         </ul>\
                     </li>\
-                    <li class="hiddenNav">\
+                    <li class="pli hiddenNav">\
                         <h6 class="navIcon navIcon4">立体左右轮播</h6>\
                         <ul class="subNav">\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis10\')">\
-                                    <img src="images/planting-case9.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case9.png" alt="">\
                                     <p>立体左右轮播</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis11\')">\
-                                    <img src="images/planting-case10.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case10.png" alt="">\
                                     <p>带左右按钮</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis12\')">\
-                                    <img src="images/planting-case11.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case11.png" alt="">\
                                     <p>带分页按钮</p>\
                                 </a>\
                             </li>\
                             <li>\
                                 <a href="javascript:;" onclick="addCTFn(\'bnBasis13\')">\
-                                    <img src="images/planting-case12.png" alt="">\
+                                    <img src="https://img.ssl.q1.com/editPage/img/planting-case12.png" alt="">\
                                     <p>带左右和分页按钮</p>\
                                 </a>\
                             </li>\
@@ -235,13 +237,20 @@ var baseCTObj = [
                             <span>更改图片：</span>\
                             <input type="file" class="topImgChange" data-type="bgImg"/>\
                         </div>\
+                        <div class="topCTrow">\
+                            <span>内容是否下移：</span>\
+                            <select class="topValChange" data-type="isMove">\
+                                <option value="1">是</option>\
+                                <option value="0">否</option>\
+                            </select>\
+                        </div>\
                         <br style="clear: both">\
                     </div>';
             return rhtml;
         },
         "creatViewObj": function () {
             var rObj = {
-                "classType":"topBasis2","bgImg":'https://img.ssl.q1.com/editPage/img/mrImg3.png?v=2'
+                "classType":"topBasis2","bgImg":'https://img.ssl.q1.com/editPage/img/mrImg3.png?v=2',"isMove":1
             };
             return rObj;
         }
@@ -2861,6 +2870,7 @@ var resultHtmlCT=[
         "ctName": "textBasis",
         "cnName": "普通文本",
         "creatHtml":function(obj){
+            obj.txt = obj.txt.replace(/\n/g,"<br/>");
             var rhtml='<div class="textBasis" style="background:'+obj.bgColor+';color:'+obj.txtColor+';">';
             rhtml+='<p>'+obj.txt+'</p>';
             rhtml+='</div>';
@@ -2871,6 +2881,7 @@ var resultHtmlCT=[
         "ctName": "textBasis2",
         "cnName": "版权文本",
         "creatHtml":function(obj){
+            obj.txt = obj.txt.replace(/\n/g,"<br/>");
             var rhtml='<div class="textBasis" style="background:'+obj.bgColor+';color:'+obj.txtColor+';">';
             rhtml+='<p>'+obj.txt+'</p>';
             rhtml+='</div>';

@@ -6,19 +6,19 @@
 var resultHtml="";
 //游戏相关model
 var gameModel={
-    "gameName":"御龙决",
+    "gameName":"远征手游",
     //游戏Icon
     "gameIcon":"http://img.res.szgla.com/yzsy/images/login_sj/login_180323/icon_ylj.png?v=1",
     //版权信息
-    "copyright":"Copyright © 2009 - 2019 Glacier,Inc. All Rights Reserved.深圳冰川网络股份有限公司 版权所有",
+    "copyright":"Copyright © 2009 - 2019 Glacier,Inc. All Rights Reserved.\n深圳冰川网络股份有限公司版权所有",
     //request地址
-    "requestUrl":"https://yzsy.ssl.q1.com/js/request_ylj.js?v=2",
+    "requestUrl":"https://yzsy.q1.com/js/request.js?v=1",
     //cnzz统计代码
-    "statisUrl":"https://css.ssl.q1.com/yzsy/js/statis.js?v=1",
+    "statisUrl":"https://css.ssl.q1.com/yzsy/js/statis.js?v=2",
     //游戏keywords文案
-    "pageKeywords":"御龙决,御龙决手游,御龙决手机版,国战,新国战,国战手游,休闲国战,社交国战,手游,手机游戏",
+    "pageKeywords":"远征手游,远征手游手游,远征手游手机版,国战,新国战,国战手游,休闲国战,社交国战,手游,手机游戏",
     //游戏Description文案
-    "pageDescription":"《御龙决》由端游原班人马打造，完美继承并延续端游背景及设定，万人国战激情上演。百套个性时装，720°全域动态视角，邀您与四千万用户再聚《御龙决》世界！",
+    "pageDescription":"《远征手游》由端游原班人马打造，完美继承并延续端游背景及设定，万人国战激情上演。百套个性时装，720°全域动态视角，邀您与四千万用户再聚《远征手游》世界！",
     //html文件存放目录
     "saveUrl":"http://yzsy.q1.com/login_sj/"
 };
@@ -28,7 +28,7 @@ var commModel={
     //页面UI宽度
     "uiWidth":"750",
     //页面title文案
-    "pageTitle":"《御龙决》",
+    "pageTitle":"远征手游",
     //是否调用document.domain
     "isDomain":true,
     "domainTxt":"q1.com",

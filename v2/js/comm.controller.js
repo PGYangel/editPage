@@ -39,7 +39,7 @@ function initPageFn(mJson, pType) {
        // loadColorPicker();
     }
 
-   
+
 }
 function updateBorders(color) {
     var hexColor = "transparent";
@@ -145,6 +145,14 @@ function creatHtmlString() {
     var topTxt = creatTopBoxFn();
     var bottomTxt = creatBottomBoxFn();
     var mainTxt = creatMainFn();
+    var topbasi='';
+    if (viewObj.topCTObj.length > 0) {
+        if(parseInt(viewObj.topCTObj[0].isMove)){
+            var timg=viewObj.topCTObj[0].bgImg;
+            var tobj={classType: "basis1",bgColor:"#fff;opacity:0",img:timg};
+            topbasi=resultHtmlCT[3].creatHtml(tobj);
+        }
+    }
     resultHtml = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">\
     <title>'+ commModel.pageTitle + '</title>\
     <meta name="Keywords" content="'+ gameModel.pageKeywords + '"/>\
@@ -181,11 +189,11 @@ function creatHtmlString() {
     <link href="https://css.ssl.q1.com/editPage/css/view.css?v=1" rel="stylesheet">\
     </head><body style="background-color:'+ commModel.bodyBgColor + ';">'
     + topTxt + bottomTxt +
-    '<div class="wrap">' + mainTxt + '</div>\
+    '<div class="wrap">' + topbasi + mainTxt + '</div>\
+    <script type="text/javascript" src="https://css2.ssl.q1.com/yzsy/js/login_sj/copyClipboard.js?v=1"></script>\
     <script type="text/javascript" src="'+ gameModel.statisUrl + '"></script>\
     </body>\
     </html>';
-
     return resultHtml;
 }
 

@@ -4,11 +4,8 @@
  */
 //左侧导航展开和收缩
 $(".leftNav .unit").on("click", "h6", function () {
-    if($(this).parent().hasClass('hiddenNav')){
-        $(this).parent().removeClass('hiddenNav')
-    }else{
-        $(this).parent().addClass('hiddenNav')
-    }
+    $('.leftNav .unit .pli').addClass('hiddenNav')
+    $(this).parent().removeClass('hiddenNav')
 });
 
 //图片上传的控件变化触发
@@ -36,18 +33,18 @@ $(".rightMain .leftBox").on("change", ".valChange", function () {
 // 颜色选择框
 $(".rightMain .leftBox").on("mouseover", ".color-box", function () {
     $(this).colpick({
-        layout:'rgbhex',
-        color:'fff',
-        onSubmit:function(hsb,hex,rgb,el) {
-            $(el).parent().find('.textInput').val('#'+hex);
+        layout: 'rgbhex',
+        color: 'fff',
+        onSubmit: function (hsb, hex, rgb, el) {
+            $(el).parent().find('.textInput').val('#' + hex);
             valChangeFn($(el).parent().find('.textInput'))
-            $(el).css('background-color', '#'+hex);
+            $(el).css('background-color', '#' + hex);
             $(el).colpickHide();
         }
     })
 });
 
-function valChangeFn(el){
+function valChangeFn(el) {
     var box = $(el).parent().parent();
     var rNum = parseInt(box.attr("data-sort"));
     var dType = $(el).attr("data-type");
@@ -63,7 +60,6 @@ $(".rightMain .leftBox").on("change", ".topImgChange", function () {
 
 //顶部浮动值变化的控件触发
 $(".rightMain .leftBox").on("change", ".topValChange", function () {
-    console.log('a')
     var dType = $(this).attr("data-type");
     viewObj.topCTObj[0][dType] = $(this).val();
     initView();
@@ -72,14 +68,14 @@ $(".rightMain .leftBox").on("change", ".topValChange", function () {
 // 顶部浮动颜色选择框
 $(".rightMain .leftBox").on("mouseover", ".color-box-top", function () {
     $(this).colpick({
-        layout:'rgbhex',
-        color:'fff',
-        onSubmit:function(hsb,hex,rgb,el) {
-            $(el).parent().find('.textInput').val('#'+hex);
+        layout: 'rgbhex',
+        color: 'fff',
+        onSubmit: function (hsb, hex, rgb, el) {
+            $(el).parent().find('.textInput').val('#' + hex);
             var dType = $(el).parent().find('.textInput').attr("data-type");
             viewObj.topCTObj[0][dType] = $(el).parent().find('.textInput').val();
             initView();
-            $(el).css('background-color', '#'+hex);
+            $(el).css('background-color', '#' + hex);
             $(el).colpickHide();
         }
     })
@@ -143,6 +139,8 @@ function addCTFn(ctName, ctType) {
     $("#editBox").append(editObj.addNewCT.creatHtmlTxt());
     initCTwz();
     initView();
+    var scrollDom = document.getElementById('leftBox');
+    scrollDom.scrollTop = scrollDom.scrollHeight;
 }
 
 //上移容器
@@ -249,7 +247,7 @@ function initCTwz() {
     editObj.nowCTSH = 0;
     $(".baseCT").each(function (index) {
         $(this).css({ "top": editObj.nowCTSH + "px" }).attr("data-sort", index);
-        editObj.nowCTSH += $(this).height() + 20;
+        editObj.nowCTSH += $(this).height() + 40;
     });
 }
 
@@ -277,14 +275,14 @@ function imgChange(fileEl, rNum, dType, cType, other) {
         var fileF = file.files[0];
         var reader = new FileReader();
         reader.readAsDataURL(fileF);
-        reader.onload = function(e){
-            //cType上传控件类型：1、轮播图片，else、单张图片
-            if(cType==1){
-                viewObj.htmlList[rNum][dType][other[0]]["img"]=this.result;
-            }else{
-                viewObj.htmlList[rNum][dType]=this.result;
-            }
-            initView();
+        reader.onload = function (e) {
+           //cType上传控件类型：1、轮播图片，else、单张图片
+           if (cType == 1) {
+               viewObj.htmlList[rNum][dType][other[0]]["img"] = this.result;
+           } else {
+               viewObj.htmlList[rNum][dType] = this.result;
+           }
+           initView();
         }
 
         /*$("#ProcessDialog").dialog("open");
@@ -292,7 +290,7 @@ function imgChange(fileEl, rNum, dType, cType, other) {
         var tmpfileurl = "";
         $.ajaxFileUploadWithFile({
             id: 'tmp_upload',
-            url: "../helper/uploadImage.aspx",
+            url: "../helper/UploadImage.aspx",
             secureuri: false,
             fileElement: fileEl,
             dataType: 'text',
@@ -309,7 +307,7 @@ function imgChange(fileEl, rNum, dType, cType, other) {
                     } else {
                         viewObj.htmlList[rNum][dType] = tmpfileurl;
                     }
-
+                    initView();
                 }
                 else {
                     alert(json.RtnMsg);
@@ -320,8 +318,6 @@ function imgChange(fileEl, rNum, dType, cType, other) {
                 alert('上传出错' + data.responseText);
             }
         });*/
-
-        //}
     }
 }
 
@@ -341,20 +337,21 @@ function imgChange2(fileEl, dType, cType) {
         var fileF = file.files[0];
         var reader = new FileReader();
         reader.readAsDataURL(fileF);
-        reader.onload = function(e){
-            if(cType==1){
-                viewObj.topCTObj[0][dType]=this.result;
-            }else{
-                viewObj.bottomCTObj[0][dType]=this.result;
-            }
-            initView();
+        reader.onload = function (e) {
+           if (cType == 1) {
+               viewObj.topCTObj[0][dType] = this.result;
+           } else {
+               viewObj.bottomCTObj[0][dType] = this.result;
+           }
+           initView();
         }
+
         /*$("#ProcessDialog").dialog("open");
 
         var tmpfileurl = "";
         $.ajaxFileUploadWithFile({
             id: 'tmp_upload',
-            url: "../helper/uploadImage.aspx",
+            url: "../helper/UploadImage.aspx",
             secureuri: false,
             fileElement: fileEl,
             dataType: 'text',
@@ -371,7 +368,7 @@ function imgChange2(fileEl, dType, cType) {
                     } else {
                         viewObj.bottomCTObj[0][dType] = tmpfileurl;
                     }
-
+                    initView();
                 }
                 else {
                     alert(json.RtnMsg);
@@ -382,9 +379,6 @@ function imgChange2(fileEl, dType, cType) {
                 alert('上传出错' + data.responseText);
             }
         });*/
-
-
-
     }
 }
 
@@ -442,4 +436,3 @@ function creatCodeImg() {
         });
     dataUriPngImage.src = s;
 }
-
